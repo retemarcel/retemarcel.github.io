@@ -1,0 +1,1652 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>铁粉空间yandex - 官方视频社区 | 深度创作者内容生态平台</title>
+<meta name="description" content="铁粉空间yandex官方网站，专注为创作者与铁粉打造高品质原创视频社区，深度解析内容生态、品牌故事与官方动态，持续运营的垂直领域视频平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2937'/%3E%3Cpath d='M22 20v24l20-12z' fill='%23f43f5e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --tf-ink:#161b26;
+  --tf-ink-2:#2a3242;
+  --tf-paper:#f6f7fb;
+  --tf-card:#ffffff;
+  --tf-accent:#e11d48;
+  --tf-accent-soft:#ffe4ea;
+  --tf-blue:#2563eb;
+  --tf-muted:#68738a;
+  --tf-line:#e3e6ef;
+  --tf-shadow:0 10px 30px rgba(22,27,38,.08);
+  --tf-radius:18px;
+  --tf-max:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:132px;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--tf-paper);
+  color:var(--tf-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+.tf-shell{width:min(100% - 40px,var(--tf-max));margin:0 auto;}
+.tf-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+
+/* ===== sticky group ===== */
+.tf-sticky-group{
+  position:sticky;top:0;z-index:80;
+}
+.tf-announce{
+  background:linear-gradient(90deg,#161b26,#3a1230 60%,#7a1230);
+  color:#ffe9ef;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.tf-announce-inner{
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;flex-wrap:wrap;
+}
+.tf-announce-tag{
+  background:var(--tf-accent);color:#fff;font-weight:700;
+  padding:2px 10px;border-radius:999px;font-size:12px;
+  letter-spacing:1px;flex:none;
+}
+.tf-announce-list{display:flex;gap:22px;flex-wrap:wrap;overflow:hidden;}
+.tf-announce-list span{white-space:nowrap;opacity:.92;}
+.tf-announce-list b{color:#fff;font-weight:600;}
+.tf-announce-close{
+  margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);
+  color:#ffe9ef;border-radius:999px;font-size:11px;padding:1px 10px;flex:none;
+}
+.tf-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--tf-line);
+  box-shadow:0 4px 18px rgba(22,27,38,.05);
+}
+.tf-header-inner{
+  display:flex;align-items:center;gap:22px;
+  padding:13px 0;
+}
+.tf-brand{display:flex;align-items:center;gap:11px;flex:none;}
+.tf-brand-mark{
+  width:42px;height:42px;border-radius:13px;flex:none;
+  background:linear-gradient(135deg,#161b26,#7a1230);
+  display:grid;place-items:center;
+  box-shadow:0 6px 16px rgba(122,18,48,.22);
+}
+.tf-brand-mark svg{width:22px;height:22px;}
+.tf-brand-name{font-weight:800;font-size:18px;letter-spacing:.3px;line-height:1.2;}
+.tf-brand-sub{font-size:11px;color:var(--tf-muted);letter-spacing:2px;text-transform:uppercase;}
+.tf-nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:6px;}
+.tf-nav a{
+  padding:7px 13px;border-radius:999px;font-size:14.5px;color:var(--tf-ink-2);
+  transition:.2s;white-space:nowrap;
+}
+.tf-nav a:hover{background:var(--tf-accent-soft);color:var(--tf-accent);}
+.tf-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto;}
+.tf-search{
+  display:flex;align-items:center;gap:6px;
+  background:#eef0f6;border-radius:999px;padding:5px 6px 5px 14px;
+  transition:.2s;border:1px solid transparent;
+}
+.tf-search:focus-within{border-color:var(--tf-accent);background:#fff;box-shadow:0 0 0 3px var(--tf-accent-soft);}
+.tf-search input{
+  border:none;background:none;outline:none;font-size:14px;width:150px;
+  color:var(--tf-ink);font-family:inherit;
+}
+.tf-search button{
+  background:var(--tf-ink);color:#fff;border:none;border-radius:999px;
+  padding:5px 13px;font-size:13px;transition:.2s;
+}
+.tf-search button:hover{background:var(--tf-accent);}
+.tf-nav-toggle{
+  display:none;background:none;border:1px solid var(--tf-line);
+  border-radius:10px;padding:7px 10px;
+}
+.tf-nav-toggle span{display:block;width:20px;height:2px;background:var(--tf-ink);margin:4px 0;border-radius:2px;}
+
+/* ===== hero ===== */
+.tf-hero{padding:52px 0 20px;}
+.tf-hero-grid{
+  display:grid;grid-template-columns:5fr 5fr;gap:44px;align-items:center;
+}
+.tf-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--tf-line);border-radius:999px;
+  padding:5px 14px;font-size:12.5px;color:var(--tf-accent);
+  font-weight:600;letter-spacing:.5px;box-shadow:var(--tf-shadow);
+}
+.tf-hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--tf-accent);display:inline-block;}
+.tf-hero h1{
+  font-size:clamp(38px,4.6vw,62px);
+  line-height:1.08;margin:20px 0 8px;letter-spacing:-1px;font-weight:800;
+}
+.tf-hero h1 em{
+  font-style:normal;
+  background:linear-gradient(120deg,var(--tf-accent),#7a1230);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tf-hero-tagline{
+  font-size:clamp(16px,1.5vw,19px);color:var(--tf-ink-2);font-weight:600;
+  margin:0 0 16px;line-height:1.6;
+}
+.tf-hero-desc{
+  font-size:15px;color:var(--tf-muted);margin:0 0 24px;max-width:56ch;
+}
+.tf-hero-desc strong{color:var(--tf-ink);font-weight:700;}
+.tf-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.tf-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-size:14.5px;font-weight:600;
+  border:1px solid transparent;transition:.22s;
+}
+.tf-btn-primary{background:var(--tf-ink);color:#fff;box-shadow:0 10px 24px rgba(22,27,38,.22);}
+.tf-btn-primary:hover{background:var(--tf-accent);transform:translateY(-2px);}
+.tf-btn-ghost{background:#fff;border-color:var(--tf-line);color:var(--tf-ink-2);}
+.tf-btn-ghost:hover{border-color:var(--tf-accent);color:var(--tf-accent);}
+.tf-btn-accent{background:var(--tf-accent);color:#fff;}
+.tf-btn-accent:hover{filter:brightness(1.08);transform:translateY(-2px);}
+.tf-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
+  padding-top:20px;border-top:1px dashed var(--tf-line);
+}
+.tf-stat b{
+  display:block;font-size:clamp(22px,2.4vw,30px);font-weight:800;letter-spacing:-.5px;
+  color:var(--tf-ink);line-height:1.2;
+}
+.tf-stat b small{font-size:13px;color:var(--tf-accent);font-weight:700;margin-left:2px;}
+.tf-stat span{font-size:12.5px;color:var(--tf-muted);}
+.tf-hero-visual{position:relative;}
+.tf-hero-frame{
+  border-radius:26px;overflow:hidden;box-shadow:0 30px 60px rgba(22,27,38,.24);
+  border:6px solid #fff;background:#000;position:relative;
+}
+.tf-hero-frame img{width:100%;aspect-ratio:16/11;object-fit:cover;}
+.tf-hero-play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.55));
+}
+.tf-hero-play i{
+  width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);
+  transition:.25s;cursor:pointer;
+}
+.tf-hero-play i:hover{transform:scale(1.08);background:var(--tf-accent);}
+.tf-hero-play i::after{
+  content:"";width:0;height:0;border-left:20px solid var(--tf-ink);
+  border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:4px;
+}
+.tf-hero-play i:hover::after{border-left-color:#fff;}
+.tf-hero-caption{
+  position:absolute;left:20px;right:20px;bottom:16px;color:#fff;
+}
+.tf-hero-caption b{display:block;font-size:15.5px;font-weight:700;}
+.tf-hero-caption span{font-size:12.5px;opacity:.85;}
+.tf-hero-badge{
+  position:absolute;top:-16px;right:-8px;
+  background:#fff;border-radius:16px;padding:10px 16px;
+  box-shadow:var(--tf-shadow);font-size:12.5px;color:var(--tf-ink-2);
+  display:flex;align-items:center;gap:8px;font-weight:600;
+}
+.tf-hero-badge b{color:var(--tf-accent);font-size:18px;}
+
+/* ===== search feedback ===== */
+.tf-search-feedback{
+  margin:0 0 26px;padding:0 0 0 2px;font-size:13.5px;color:var(--tf-accent);
+  font-weight:600;min-height:20px;display:none;
+}
+.tf-search-feedback.tf-show{display:block;}
+.tf-highlight{background:#fff3b0;border-radius:4px;padding:0 2px;}
+.tf-hidden-by-search{display:none !important;}
+
+/* ===== sections ===== */
+.tf-section{padding:56px 0;}
+.tf-section-head{
+  display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:32px;
+}
+.tf-section-head .tf-sh-main{flex:1 1 420px;min-width:0;}
+.tf-kicker{
+  font-size:12.5px;font-weight:700;letter-spacing:3px;color:var(--tf-accent);
+  text-transform:uppercase;margin:0 0 8px;
+}
+.tf-section h2{
+  font-size:clamp(26px,2.8vw,36px);font-weight:800;margin:0;letter-spacing:-.5px;line-height:1.22;
+}
+.tf-section-sub{
+  color:var(--tf-muted);font-size:14.5px;margin:10px 0 0;max-width:62ch;
+}
+.tf-section-head .tf-sh-side{flex:none;}
+.tf-pill-link{
+  display:inline-block;border:1px solid var(--tf-line);background:#fff;
+  border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;color:var(--tf-ink-2);
+  transition:.2s;
+}
+.tf-pill-link:hover{border-color:var(--tf-accent);color:var(--tf-accent);}
+
+/* ===== about / brand ===== */
+.tf-about{background:#fff;border-top:1px solid var(--tf-line);border-bottom:1px solid var(--tf-line);}
+.tf-about-grid{display:grid;grid-template-columns:7fr 5fr;gap:44px;align-items:start;}
+.tf-about-text p{font-size:15.5px;color:var(--tf-ink-2);margin:0 0 16px;}
+.tf-about-text p strong{color:var(--tf-accent);font-weight:700;}
+.tf-about-highlight{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;
+}
+.tf-about-highlight div{
+  background:var(--tf-paper);border-radius:14px;padding:14px;border:1px solid var(--tf-line);
+}
+.tf-about-highlight b{display:block;font-size:19px;color:var(--tf-accent);}
+.tf-about-highlight span{font-size:12.5px;color:var(--tf-muted);}
+.tf-about-visual{border-radius:20px;overflow:hidden;box-shadow:var(--tf-shadow);border:5px solid #fff;}
+.tf-about-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.tf-about-visual-note{
+  background:#fff;border:1px solid var(--tf-line);border-radius:0 0 16px 16px;
+  padding:14px 18px;font-size:13px;color:var(--tf-muted);margin-top:-1px;
+}
+.tf-about-visual-note b{color:var(--tf-ink);}
+
+/* ===== focus / feature ===== */
+.tf-focus-grid{display:grid;grid-template-columns:7fr 5fr;gap:26px;align-items:start;}
+.tf-focus-main{
+  background:#fff;border-radius:var(--tf-radius);overflow:hidden;box-shadow:var(--tf-shadow);
+  border:1px solid var(--tf-line);transition:.25s;
+}
+.tf-focus-main:hover{transform:translateY(-4px);}
+.tf-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.tf-focus-body{padding:22px 24px 24px;}
+.tf-tag{
+  display:inline-block;background:var(--tf-accent-soft);color:var(--tf-accent);
+  font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 10px;margin-right:6px;
+  letter-spacing:.3px;
+}
+.tf-tag-blue{background:#e3edff;color:var(--tf-blue);}
+.tf-tag-ink{background:#eef0f6;color:var(--tf-ink-2);}
+.tf-focus-body h3{font-size:21px;margin:10px 0 8px;line-height:1.35;font-weight:800;}
+.tf-focus-body p{font-size:14px;color:var(--tf-muted);margin:0 0 16px;}
+.tf-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--tf-muted);align-items:center;}
+.tf-meta b{color:var(--tf-ink-2);font-weight:600;}
+.tf-side-list{display:flex;flex-direction:column;gap:14px;}
+.tf-side-item{
+  display:grid;grid-template-columns:96px 1fr;gap:14px;
+  background:#fff;border:1px solid var(--tf-line);border-radius:16px;
+  padding:12px;transition:.2s;
+}
+.tf-side-item:hover{border-color:var(--tf-accent);transform:translateX(3px);}
+.tf-side-item img{width:96px;aspect-ratio:16/10;object-fit:cover;border-radius:10px;}
+.tf-side-item h4{margin:2px 0 5px;font-size:15px;line-height:1.4;font-weight:700;}
+.tf-side-item p{margin:0;font-size:12.5px;color:var(--tf-muted);}
+.tf-side-item .tf-meta{margin-top:6px;font-size:11.5px;gap:9px;}
+
+/* ===== video flow ===== */
+.tf-video-toolbar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;
+}
+.tf-chip{
+  background:#fff;border:1px solid var(--tf-line);border-radius:999px;
+  padding:7px 16px;font-size:13px;color:var(--tf-ink-2);transition:.2s;font-weight:500;
+}
+.tf-chip:hover,.tf-chip.tf-active{background:var(--tf-ink);border-color:var(--tf-ink);color:#fff;}
+.tf-video-list{display:flex;flex-direction:column;gap:16px;}
+.tf-video-row{
+  display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) auto;
+  gap:22px;align-items:center;
+  background:#fff;border:1px solid var(--tf-line);border-radius:var(--tf-radius);
+  padding:16px;transition:.22s;
+}
+.tf-video-row:hover{border-color:var(--tf-accent);box-shadow:var(--tf-shadow);transform:translateY(-2px);}
+.tf-video-row img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;}
+.tf-video-body{min-width:0;}
+.tf-video-body h3{margin:0 0 8px;font-size:17.5px;line-height:1.4;font-weight:700;}
+.tf-video-body p{margin:0 0 10px;font-size:13.5px;color:var(--tf-muted);}
+.tf-video-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:96px;}
+.tf-act-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border:1px solid var(--tf-line);background:#fff;border-radius:999px;
+  padding:7px 13px;font-size:12.5px;color:var(--tf-ink-2);transition:.2s;font-weight:600;
+}
+.tf-act-btn:hover{border-color:var(--tf-accent);color:var(--tf-accent);}
+.tf-act-btn.tf-liked{background:var(--tf-accent);border-color:var(--tf-accent);color:#fff;}
+.tf-act-btn.tf-saved{background:var(--tf-ink);border-color:var(--tf-ink);color:#fff;}
+
+/* ===== topics ===== */
+.tf-topics{background:#fff;border-top:1px solid var(--tf-line);border-bottom:1px solid var(--tf-line);}
+.tf-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+.tf-topic-card{
+  border:1px solid var(--tf-line);border-radius:var(--tf-radius);overflow:hidden;
+  background:var(--tf-paper);display:flex;flex-direction:column;transition:.22s;
+}
+.tf-topic-card:hover{transform:translateY(-4px);box-shadow:var(--tf-shadow);}
+.tf-topic-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.tf-topic-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;}
+.tf-topic-body h3{margin:6px 0 8px;font-size:18px;font-weight:800;line-height:1.35;}
+.tf-topic-body p{margin:0 0 12px;font-size:13px;color:var(--tf-muted);}
+.tf-topic-status{font-size:12px;color:var(--tf-accent);font-weight:700;margin-bottom:10px;}
+.tf-topic-items{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:6px;}
+.tf-topic-items li{font-size:12.8px;color:var(--tf-ink-2);padding-left:16px;position:relative;}
+.tf-topic-items li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:2px;background:var(--tf-accent);opacity:.7;}
+.tf-topic-more{margin-top:auto;font-size:12.5px;font-weight:700;color:var(--tf-ink);}
+.tf-topic-more:hover{color:var(--tf-accent);}
+
+/* ===== authors ===== */
+.tf-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.tf-author-card{
+  display:flex;gap:16px;background:#fff;border:1px solid var(--tf-line);
+  border-radius:var(--tf-radius);padding:18px;transition:.22s;
+}
+.tf-author-card:hover{border-color:var(--tf-accent);box-shadow:var(--tf-shadow);}
+.tf-avatar{
+  width:62px;height:62px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-weight:800;color:#fff;font-size:20px;letter-spacing:.5px;
+}
+.tf-author-body{min-width:0;}
+.tf-author-body h3{margin:0 0 3px;font-size:16.5px;font-weight:800;}
+.tf-author-field{font-size:12px;color:var(--tf-accent);font-weight:700;margin-bottom:8px;letter-spacing:.3px;}
+.tf-author-body p{margin:0 0 10px;font-size:12.8px;color:var(--tf-muted);line-height:1.65;}
+.tf-author-stats{display:flex;gap:14px;font-size:12px;color:var(--tf-muted);}
+.tf-author-stats b{color:var(--tf-ink-2);font-weight:700;}
+.tf-author-btn{
+  background:none;border:none;color:var(--tf-accent);font-size:12.5px;font-weight:700;
+  padding:0;margin-top:8px;display:inline-block;
+}
+.tf-author-btn:hover{text-decoration:underline;}
+
+/* ===== keyword analysis ===== */
+.tf-analysis{background:linear-gradient(180deg,#fff,#fbfbff);}
+.tf-analysis-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 44px;}
+.tf-analysis-block h3{
+  font-size:19px;font-weight:800;margin:0 0 12px;display:flex;align-items:center;gap:10px;
+}
+.tf-analysis-block h3 i{
+  display:grid;place-items:center;width:28px;height:28px;border-radius:9px;
+  background:var(--tf-accent-soft);color:var(--tf-accent);font-style:normal;font-size:14px;font-weight:800;flex:none;
+}
+.tf-analysis-block p{font-size:14.5px;color:var(--tf-ink-2);margin:0 0 14px;}
+.tf-analysis-block p strong{color:var(--tf-ink);font-weight:700;}
+.tf-analysis-note{
+  grid-column:1/-1;background:#fff;border:1px solid var(--tf-line);border-left:4px solid var(--tf-accent);
+  border-radius:12px;padding:18px 22px;font-size:13.5px;color:var(--tf-muted);
+}
+.tf-analysis-note b{color:var(--tf-ink);}
+
+/* ===== reviews ===== */
+.tf-reviews{background:#fff;border-top:1px solid var(--tf-line);border-bottom:1px solid var(--tf-line);}
+.tf-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.tf-review-card{
+  background:var(--tf-paper);border:1px solid var(--tf-line);border-radius:16px;padding:20px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.tf-review-head{display:flex;align-items:center;gap:11px;}
+.tf-avatar-sm{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:700;font-size:14px;}
+.tf-review-who b{display:block;font-size:13.5px;font-weight:700;}
+.tf-review-who span{font-size:11.5px;color:var(--tf-muted);}
+.tf-stars{margin-left:auto;color:#f59e0b;font-size:12.5px;letter-spacing:2px;}
+.tf-review-card p{margin:0;font-size:13.5px;color:var(--tf-ink-2);}
+.tf-review-quote{
+  background:#fff;border:1px solid var(--tf-line);border-radius:16px;padding:22px;
+  grid-column:1/-1;position:relative;
+}
+.tf-review-quote::before{
+  content:"“";position:absolute;top:-4px;left:16px;font-size:52px;color:var(--tf-accent-soft);
+  font-family:Georgia,serif;line-height:1;
+}
+.tf-review-quote p{margin:0 0 10px;font-size:15px;color:var(--tf-ink-2);padding-left:26px;}
+.tf-review-quote cite{font-size:12.5px;color:var(--tf-muted);font-style:normal;padding-left:26px;}
+
+/* ===== FAQ ===== */
+.tf-faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start;}
+.tf-faq-grid details{
+  background:#fff;border:1px solid var(--tf-line);border-radius:14px;
+  padding:16px 20px;transition:.2s;
+}
+.tf-faq-grid details[open]{border-color:var(--tf-accent);box-shadow:var(--tf-shadow);}
+.tf-faq-grid summary{
+  font-size:14.5px;font-weight:700;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.tf-faq-grid summary::-webkit-details-marker{display:none;}
+.tf-faq-grid summary::after{content:"+";font-size:20px;color:var(--tf-accent);font-weight:400;line-height:1;}
+.tf-faq-grid details[open] summary::after{content:"–";}
+.tf-faq-grid details p{
+  margin:12px 0 0;font-size:13.5px;color:var(--tf-muted);border-top:1px dashed var(--tf-line);padding-top:12px;
+}
+
+/* ===== news ===== */
+.tf-news-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.tf-news-card{
+  background:#fff;border:1px solid var(--tf-line);border-radius:16px;padding:20px;
+  transition:.2s;display:flex;flex-direction:column;gap:8px;
+}
+.tf-news-card:hover{border-color:var(--tf-accent);transform:translateY(-3px);}
+.tf-news-date{font-size:11.5px;color:var(--tf-accent);font-weight:700;letter-spacing:.5px;}
+.tf-news-card h3{margin:0;font-size:15.5px;font-weight:800;line-height:1.45;}
+.tf-news-card p{margin:0;font-size:12.8px;color:var(--tf-muted);}
+
+/* ===== partners ===== */
+.tf-partners{background:#fff;border-top:1px solid var(--tf-line);}
+.tf-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.tf-partner{
+  border:1px dashed var(--tf-line);border-radius:14px;padding:20px 16px;text-align:center;
+  font-weight:800;font-size:14px;color:var(--tf-ink-2);background:var(--tf-paper);
+  letter-spacing:.5px;transition:.2s;
+}
+.tf-partner span{display:block;font-size:11px;color:var(--tf-muted);font-weight:500;margin-top:4px;letter-spacing:0;}
+.tf-partner:hover{border-color:var(--tf-accent);color:var(--tf-accent);background:#fff;}
+
+/* ===== footer ===== */
+.tf-footer{background:var(--tf-ink);color:#c7cdda;padding:54px 0 26px;margin-top:10px;}
+.tf-footer-grid{display:grid;grid-template-columns:4fr 3fr 3fr 2fr;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1);}
+.tf-footer h4{color:#fff;font-size:13.5px;letter-spacing:1.5px;margin:0 0 14px;font-weight:700;}
+.tf-footer p{font-size:12.8px;margin:0 0 10px;line-height:1.7;}
+.tf-footer a{font-size:12.8px;display:block;padding:3px 0;color:#c7cdda;transition:.2s;}
+.tf-footer a:hover{color:#fff;}
+.tf-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.tf-footer-brand .tf-brand-mark{box-shadow:none;background:linear-gradient(135deg,#e11d48,#7a1230);}
+.tf-footer-brand b{color:#fff;font-size:16px;font-weight:800;}
+.tf-footer-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:20px;font-size:12px;color:#8b94a7;}
+.tf-footer-bottom span{letter-spacing:.3px;}
+
+/* ===== toast & modal ===== */
+.tf-toast{
+  position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(30px);
+  background:var(--tf-ink);color:#fff;font-size:13.5px;padding:11px 24px;border-radius:999px;
+  box-shadow:0 16px 40px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:.3s;z-index:200;
+}
+.tf-toast.tf-show{opacity:1;transform:translateX(-50%) translateY(0);}
+.tf-modal-mask{
+  position:fixed;inset:0;background:rgba(12,16,24,.6);backdrop-filter:blur(4px);
+  display:none;place-items:center;z-index:190;padding:20px;
+}
+.tf-modal-mask.tf-show{display:grid;}
+.tf-modal{
+  background:#fff;border-radius:20px;max-width:460px;width:100%;padding:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,.35);max-height:86vh;overflow:auto;
+}
+.tf-modal h3{margin:0 0 10px;font-size:19px;font-weight:800;}
+.tf-modal p{font-size:13.5px;color:var(--tf-muted);margin:0 0 16px;}
+.tf-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px;}
+
+/* ===== back to top ===== */
+.tf-top-btn{
+  position:fixed;right:22px;bottom:26px;z-index:100;
+  width:46px;height:46px;border-radius:50%;border:none;background:var(--tf-ink);color:#fff;
+  display:grid;place-items:center;font-size:18px;box-shadow:0 12px 28px rgba(0,0,0,.25);
+  opacity:0;pointer-events:none;transition:.3s;transform:translateY(10px);
+}
+.tf-top-btn.tf-show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.tf-top-btn:hover{background:var(--tf-accent);}
+
+/* ===== responsive ===== */
+@media(max-width:960px){
+  .tf-hero-grid,.tf-about-grid,.tf-focus-grid,.tf-analysis-grid{grid-template-columns:1fr;gap:30px;}
+  .tf-hero{order:-1;}
+  .tf-topic-grid,.tf-news-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .tf-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .tf-footer-grid{grid-template-columns:1fr 1fr;}
+  .tf-video-row{grid-template-columns:minmax(0,180px) minmax(0,1fr);}
+  .tf-video-actions{grid-column:1/-1;flex-direction:row;justify-content:flex-end;}
+  .tf-hero-badge{right:8px;}
+}
+@media(max-width:768px){
+  html{scroll-padding-top:110px;}
+  .tf-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--tf-line);
+    flex-direction:column;padding:10px 20px 16px;box-shadow:0 18px 30px rgba(22,27,38,.12);
+    gap:2px;z-index:70;
+  }
+  .tf-nav.tf-open{display:flex;}
+  .tf-header-inner{position:relative;padding-right:0;}
+  .tf-nav-toggle{display:block;margin-left:auto;}
+  .tf-search input{width:110px;}
+  .tf-author-grid,.tf-review-grid,.tf-faq-grid{grid-template-columns:1fr;}
+  .tf-topic-grid,.tf-news-list{grid-template-columns:1fr;}
+  .tf-hero-actions .tf-btn{flex:1;justify-content:center;}
+  .tf-video-row{grid-template-columns:1fr;}
+  .tf-about-highlight{grid-template-columns:1fr;}
+  .tf-footer-grid{grid-template-columns:1fr;}
+  .tf-section{padding:44px 0;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="tf-sticky-group">
+  <div class="tf-announce" id="tf-announce">
+    <div class="tf-shell tf-announce-inner">
+      <span class="tf-announce-tag">官方发布</span>
+      <div class="tf-announce-list">
+        <span><b>11/22</b> 铁粉空间yandex 冬季创作挑战赛开启报名</span>
+        <span><b>11/20</b> 高清创作专区上线，支持 4K 原片上传</span>
+        <span><b>11/18</b> 品牌故事纪录片《真实的回响》全网首发</span>
+      </div>
+      <button class="tf-announce-close" id="tf-announce-close" aria-label="收起公告">收起</button>
+    </div>
+  </div>
+  <header class="tf-header">
+    <div class="tf-shell tf-header-inner">
+      <a class="tf-brand" href="#tf-hero">
+        <span class="tf-brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#f43f5e"/></svg>
+        </span>
+        <span>
+          <span class="tf-brand-name">铁粉空间yandex</span>
+          <span class="tf-brand-sub">Official Video Community</span>
+        </span>
+      </a>
+      <nav class="tf-nav" id="tf-nav" aria-label="主导航">
+        <a href="#tf-hero">首页</a>
+        <a href="#tf-about">品牌简介</a>
+        <a href="#tf-focus">焦点内容</a>
+        <a href="#tf-video">热门视频</a>
+        <a href="#tf-topics">专题企划</a>
+        <a href="#tf-authors">创作者</a>
+        <a href="#tf-analysis">关键词解析</a>
+        <a href="#tf-reviews">用户口碑</a>
+        <a href="#tf-faq">常见问题</a>
+      </nav>
+      <div class="tf-header-tools">
+        <form class="tf-search" id="tf-search-form" role="search">
+          <label class="tf-sr" for="tf-search-input">搜索视频内容</label>
+          <input type="search" id="tf-search-input" placeholder="搜索视频 / 创作者 / 专题" autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="tf-nav-toggle" id="tf-nav-toggle" aria-label="展开导航" aria-expanded="false" aria-controls="tf-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- S2 品牌首屏 5:5 大幅图文 -->
+<section class="tf-hero" id="tf-hero">
+  <div class="tf-shell">
+    <div class="tf-hero-grid">
+      <div class="tf-hero-copy">
+        <span class="tf-hero-eyebrow"><i></i> 铁粉社区 · 官方网站</span>
+        <h1>铁粉空间<em>yandex</em></h1>
+        <p class="tf-hero-tagline">把真实的创作者，留在真实的观众身边。</p>
+        <p class="tf-hero-desc">
+          铁粉空间yandex是一个面向<strong>铁粉与原创创作者</strong>的高品质视频社区。我们以官方身份持续运营内容生态，
+          用高清画质、正版内容与专业审核，把每一份真诚的表达送到真正懂它的人面前。
+          作为一个深耕垂直领域的视频品牌平台，我们相信长期陪伴比一时热度更有力量。
+        </p>
+        <div class="tf-hero-actions">
+          <a class="tf-btn tf-btn-primary" href="#tf-video">观看热门视频</a>
+          <button class="tf-btn tf-btn-accent" id="tf-submit-open" type="button">投稿入口</button>
+          <a class="tf-btn tf-btn-ghost" href="#tf-authors">认识创作者</a>
+        </div>
+        <div class="tf-hero-stats">
+          <div class="tf-stat"><b data-tf-count="1286">1286<small>万</small></b><span>累计内容播放</span></div>
+          <div class="tf-stat"><b data-tf-count="432">432<small>位</small></b><span>认证创作者</span></div>
+          <div class="tf-stat"><b data-tf-count="97">97<small>%</small></b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+      <div class="tf-hero-visual">
+        <div class="tf-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23121922'/%3E%3Cstop offset='1' stop-color='%233a1230'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23e11d48'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23a)'/%3E%3Ccircle cx='620' cy='130' r='170' fill='%23e11d48' opacity='.22'/%3E%3Ccircle cx='180' cy='460' r='210' fill='%232563eb' opacity='.16'/%3E%3Crect x='70' y='120' width='380' height='250' rx='16' fill='%23ffffff' opacity='.08'/%3E%3Crect x='70' y='120' width='380' height='250' rx='16' stroke='%23ffffff' stroke-opacity='.35'/%3E%3Ccircle cx='260' cy='245' r='46' fill='url(%23b)'/%3E%3Cpath d='M248 225l32 20-32 20z' fill='%23121922'/%3E%3Crect x='120' y='400' width='220' height='14' rx='7' fill='%23ffffff' opacity='.55'/%3E%3Crect x='120' y='430' width='150' height='10' rx='5' fill='%23ffffff' opacity='.3'/%3E%3Crect x='520' y='320' width='220' height='120' rx='14' fill='%23ffffff' opacity='.12' stroke='%23ffffff' stroke-opacity='.3'/%3E%3Crect x='540' y='342' width='90' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='540' y='364' width='150' height='7' rx='3' fill='%23ffffff' opacity='.28'/%3E%3Crect x='540' y='384' width='120' height='7' rx='3' fill='%23ffffff' opacity='.28'/%3E%3C/svg%3E" alt="铁粉空间yandex品牌主视觉：深色影音界面与红色播放标识">
+          <div class="tf-hero-play" role="button" tabindex="0" aria-label="播放品牌形象片"><i></i></div>
+          <div class="tf-hero-caption">
+            <b>品牌形象片 · 真实的回响</b>
+            <span>官方出品 / 4K 高清 / 时长 06:24</span>
+          </div>
+        </div>
+        <div class="tf-hero-badge">本周新增 <b>+128</b> 部原创</div>
+      </div>
+    </div>
+    <div class="tf-search-feedback" id="tf-search-feedback" role="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- S2/S3 企业简介 -->
+<section class="tf-section tf-about" id="tf-about">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">About The Brand</p>
+        <h2>一家把“铁粉”写进名字里的视频企业</h2>
+        <p class="tf-section-sub">铁粉空间yandex官方网站，以创作者为核心、以内容生态为骨架，长期服务垂直领域的高品质视频社区。</p>
+      </div>
+      <div class="tf-sh-side"><a class="tf-pill-link" href="#tf-analysis">阅读深度解析 →</a></div>
+    </div>
+    <div class="tf-about-grid">
+      <div class="tf-about-text">
+        <p>
+          铁粉空间yandex是一家以视频为核心业务的互联网内容企业，运营主体团队由内容策划、算法工程、版权合规与社区运营四类岗位构成。
+          作为<strong>官方网站</strong>对外发布的窗口，我们在这里同步品牌故事、企业动态与官方发布信息，
+          并把社区里真正被反复观看的精品内容整理成可追溯的内容档案。
+        </p>
+        <p>
+          平台坚持原创、正版、高清三条底线：所有公开分发的视频均经过人工与机器双重审核，
+          创作者上传的原片保留最高画质，观众端按网络状况自适应清晰度。我们不做流量竞价的短期生意，
+          而是用<strong>持续运营</strong>的方式，把垂直领域的内容生态做深、做厚。
+        </p>
+        <p>
+          从2021年上线内测至今，铁粉空间yandex累计服务超过 1200 万观众，认证创作者 432 位，
+          覆盖影像记录、经验分享、深度测评、教程干货、人物访谈等多元题材。
+          我们相信“用户至上”不是口号，而是每一次播放、每一条评论、每一次投稿入口都能被认真对待。
+        </p>
+        <div class="tf-about-highlight">
+          <div><b>2021</b><span>品牌创立年份</span></div>
+          <div><b>432</b><span>认证创作者数量</span></div>
+          <div><b>4K</b><span>高清原片上限</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="tf-about-visual">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cdefs%3E%3ClinearGradient id='c' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f8fafc'/%3E%3Cstop offset='1' stop-color='%23ffe4ea'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='480' fill='url(%23c)'/%3E%3Crect x='60' y='60' width='520' height='300' rx='18' fill='%23ffffff' stroke='%23e3e6ef'/%3E%3Crect x='90' y='92' width='200' height='16' rx='8' fill='%23161b26'/%3E%3Crect x='90' y='124' width='300' height='10' rx='5' fill='%23c7cdda'/%3E%3Crect x='90' y='146' width='260' height='10' rx='5' fill='%23c7cdda'/%3E%3Crect x='90' y='190' width='150' height='110' rx='12' fill='%23e11d48' opacity='.85'/%3E%3Crect x='260' y='190' width='150' height='110' rx='12' fill='%232563eb' opacity='.75'/%3E%3Crect x='430' y='190' width='110' height='110' rx='12' fill='%23f59e0b' opacity='.8'/%3E%3Crect x='60' y='392' width='180' height='14' rx='7' fill='%23161b26' opacity='.7'/%3E%3Crect x='260' y='392' width='120' height='14' rx='7' fill='%23e11d48' opacity='.7'/%3E%3C/svg%3E" alt="铁粉空间yandex企业办公与内容审核流程示意图">
+        </div>
+        <div class="tf-about-visual-note">
+          <b>官方发布</b>：内容审核流程由三道人工复核 + 一套自动化版权比对构成，保证每一条公开视频都可追溯来源。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 焦点内容 -->
+<section class="tf-section" id="tf-focus">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Editor's Focus</p>
+        <h2>焦点内容 · 本周最值得花时间的影像</h2>
+        <p class="tf-section-sub">由官方编辑部与社区共同票选产生，每一部都经过完整观看与内容核对。</p>
+      </div>
+      <div class="tf-sh-side"><button class="tf-pill-link" id="tf-copy-btn" type="button">复制本页链接</button></div>
+    </div>
+    <div class="tf-focus-grid">
+      <article class="tf-focus-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='d' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2937'/%3E%3Cstop offset='1' stop-color='%235b1a3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23d)'/%3E%3Ccircle cx='620' cy='100' r='130' fill='%23f59e0b' opacity='.18'/%3E%3Cpath d='M0 360 Q200 280 400 350 T800 320 V450 H0Z' fill='%23e11d48' opacity='.28'/%3E%3Crect x='90' y='90' width='150' height='150' rx='14' fill='%23ffffff' opacity='.14'/%3E%3Ccircle cx='165' cy='165' r='34' fill='%23ffffff' opacity='.85'/%3E%3Cpath d='M155 150l24 15-24 15z' fill='%231f2937'/%3E%3Crect x='300' y='120' width='330' height='18' rx='9' fill='%23ffffff' opacity='.7'/%3E%3Crect x='300' y='158' width='260' height='12' rx='6' fill='%23ffffff' opacity='.4'/%3E%3Crect x='300' y='184' width='300' height='12' rx='6' fill='%23ffffff' opacity='.4'/%3E%3Crect x='90' y='300' width='240' height='12' rx='6' fill='%23ffffff' opacity='.55'/%3E%3Crect x='90' y='328' width='180' height='10' rx='5' fill='%23ffffff' opacity='.3'/%3E%3C/svg%3E" alt="焦点内容《真实的回响》创作者访谈纪录片封面">
+        <div class="tf-focus-body">
+          <span class="tf-tag">深度访谈</span><span class="tf-tag tf-tag-ink">4K 高清</span>
+          <h3>真实的回响：一位影像创作者和他的三百个清晨</h3>
+          <p>他用三年时间记录同一座城市的清晨，从四点半的菜市场到六点的第一班公交。这不是一部关于技巧的片子，而是关于耐心、关于铁粉与创作者之间那种不需要解释的默契。官方访谈完整版首次公开。</p>
+          <div class="tf-meta">
+            <span>创作者 <b>清晨记录者</b></span>
+            <span>播放 <b>86.4万</b></span>
+            <span>收藏 <b>2.7万</b></span>
+            <span>时长 <b>18:42</b></span>
+          </div>
+        </div>
+      </article>
+      <div class="tf-side-list">
+        <article class="tf-side-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23eef3ff'/%3E%3Ccircle cx='250' cy='60' r='70' fill='%232563eb' opacity='.2'/%3E%3Crect x='40' y='60' width='120' height='80' rx='10' fill='%232563eb' opacity='.65'/%3E%3Crect x='180' y='60' width='100' height='80' rx='10' fill='%23e11d48' opacity='.5'/%3E%3Crect x='40' y='158' width='180' height='10' rx='5' fill='%231f2937' opacity='.4'/%3E%3C/svg%3E" alt="教程内容《零基础剪辑入门》缩略图">
+          <div>
+            <h4>零基础剪辑入门：用三段素材讲完一个故事</h4>
+            <p>从素材筛选到节奏设计，完整拆解一条三分钟短片的成型过程。</p>
+            <div class="tf-meta"><span>教程干货</span><span>播放 32.1万</span></div>
+          </div>
+        </article>
+        <article class="tf-side-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23fff7ed'/%3E%3Cpath d='M0 150 Q80 100 160 140 T320 120 V200 H0Z' fill='%23f59e0b' opacity='.45'/%3E%3Ccircle cx='90' cy='70' r='40' fill='%23e11d48' opacity='.5'/%3E%3Crect x='160' y='60' width='120' height='14' rx='7' fill='%231f2937' opacity='.5'/%3E%3Crect x='160' y='86' width='90' height='10' rx='5' fill='%231f2937' opacity='.3'/%3E%3C/svg%3E" alt="测评内容《家庭录音棚搭建实测》缩略图">
+          <div>
+            <h4>五千元预算，能不能搭一个像样的家庭录音棚？</h4>
+            <p>声学处理、设备选型与实测对比，给独立创作者的一份实用清单。</p>
+            <div class="tf-meta"><span>深度测评</span><span>播放 24.6万</span></div>
+          </div>
+        </article>
+        <article class="tf-side-item">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f0fdf4'/%3E%3Ccircle cx='80' cy='100' r='55' fill='%2316a34a' opacity='.3'/%3E%3Ccircle cx='220' cy='100' r='55' fill='%232563eb' opacity='.25'/%3E%3Crect x='130' y='90' width='60' height='60' rx='10' fill='%23e11d48' opacity='.55'/%3E%3Crect x='60' y='168' width='200' height='9' rx='4' fill='%231f2937' opacity='.35'/%3E%3C/svg%3E" alt="品牌故事《我们为什么坚持做一个慢社区》缩略图">
+          <div>
+            <h4>我们为什么坚持做一个“慢”社区</h4>
+            <p>官方团队自述：不做榜单焦虑，把注意力还给内容本身。</p>
+            <div class="tf-meta"><span>品牌故事</span><span>播放 19.8万</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 热门视频流：单列图文列表 -->
+<section class="tf-section tf-video-section" id="tf-video">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Trending Now</p>
+        <h2>热门视频 · 社区正在观看</h2>
+        <p class="tf-section-sub">热度由播放完成率、互动密度与收藏转化共同决定，实时更新，拒绝刷量。</p>
+      </div>
+      <div class="tf-sh-side"><a class="tf-pill-link" href="#tf-topics">查看全部专题</a></div>
+    </div>
+    <div class="tf-video-toolbar" id="tf-video-toolbar">
+      <button class="tf-chip tf-active" data-tf-filter="all" type="button">全部</button>
+      <button class="tf-chip" data-tf-filter="记录" type="button">日常记录</button>
+      <button class="tf-chip" data-tf-filter="教程" type="button">教程干货</button>
+      <button class="tf-chip" data-tf-filter="测评" type="button">深度测评</button>
+      <button class="tf-chip" data-tf-filter="访谈" type="button">人物访谈</button>
+    </div>
+    <div class="tf-video-list" id="tf-video-list">
+
+      <article class="tf-video-row" data-tf-tags="记录">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23161b26'/%3E%3Crect x='24' y='30' width='100' height='70' rx='8' fill='%23e11d48' opacity='.7'/%3E%3Crect x='140' y='30' width='156' height='70' rx='8' fill='%23ffffff' opacity='.14'/%3E%3Crect x='24' y='116' width='200' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='24' y='136' width='140' height='7' rx='3' fill='%23ffffff' opacity='.28'/%3E%3C/svg%3E" alt="视频《凌晨四点的城市记录》封面">
+        <div class="tf-video-body">
+          <h3>凌晨四点的城市，有人在替我们醒着</h3>
+          <p>跟随三位夜班工作者走过一座城市最安静的四小时，记录那些不被镜头注意的日常。</p>
+          <div class="tf-meta">
+            <span class="tf-tag">日常记录</span>
+            <span>@城市观察所</span><span>播放 41.2万</span><span>点赞 <b class="tf-like-count">1.8万</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+      <article class="tf-video-row" data-tf-tags="教程">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23eef3ff'/%3E%3Crect x='30' y='26' width='260' height='94' rx='10' fill='%23ffffff' stroke='%232563eb' stroke-opacity='.4'/%3E%3Crect x='46' y='42' width='90' height='9' rx='4' fill='%232563eb' opacity='.7'/%3E%3Crect x='46' y='62' width='180' height='8' rx='4' fill='%23161b26' opacity='.3'/%3E%3Crect x='46' y='80' width='140' height='8' rx='4' fill='%23161b26' opacity='.25'/%3E%3Crect x='30' y='136' width='120' height='10' rx='5' fill='%23e11d48' opacity='.7'/%3E%3C/svg%3E" alt="视频《三分钟讲清剪辑节奏》封面">
+        <div class="tf-video-body">
+          <h3>三分钟讲清剪辑节奏：为什么你的片子“不好看”</h3>
+          <p>用四组对照素材演示节奏问题，给出可直接套用的剪辑检查清单。</p>
+          <div class="tf-meta">
+            <span class="tf-tag tf-tag-blue">教程干货</span>
+            <span>@剪辑师老陈</span><span>播放 37.5万</span><span>点赞 <b class="tf-like-count">2.1万</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+      <article class="tf-video-row" data-tf-tags="测评">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23fff7ed'/%3E%3Ccircle cx='80' cy='90' r='46' fill='%23f59e0b' opacity='.5'/%3E%3Crect x='150' y='44' width='140' height='12' rx='6' fill='%23161b26' opacity='.55'/%3E%3Crect x='150' y='68' width='100' height='10' rx='5' fill='%23161b26' opacity='.35'/%3E%3Crect x='150' y='92' width='120' height='10' rx='5' fill='%23161b26' opacity='.35'/%3E%3Crect x='150' y='126' width='70' height='20' rx='10' fill='%23e11d48' opacity='.7'/%3E%3C/svg%3E" alt="视频《三款麦克风盲测》封面">
+        <div class="tf-video-body">
+          <h3>三款千元麦克风盲测，结果和价格没关系</h3>
+          <p>同一段人声、同一间屋子、同一套录音链路，我们请十位听众做了盲听打分。</p>
+          <div class="tf-meta">
+            <span class="tf-tag tf-tag-ink">深度测评</span>
+            <span>@录音棚日记</span><span>播放 29.7万</span><span>点赞 <b class="tf-like-count">1.4万</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+      <article class="tf-video-row" data-tf-tags="访谈">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23faf5ff'/%3E%3Ccircle cx='90' cy='80' r='42' fill='%239333ea' opacity='.4'/%3E%3Ccircle cx='220' cy='100' r='52' fill='%23e11d48' opacity='.3'/%3E%3Crect x='40' y='140' width='240' height='9' rx='4' fill='%23161b26' opacity='.4'/%3E%3Crect x='40' y='158' width='160' height='7' rx='3' fill='%23161b26' opacity='.22'/%3E%3C/svg%3E" alt="视频《在地文化访谈：老手艺的新观众》封面">
+        <div class="tf-video-body">
+          <h3>在地文化访谈：老手艺如何遇见新观众</h3>
+          <p>三位手艺人 + 一位纪录片导演，聊聊“被看见”这件事对传统手艺意味着什么。</p>
+          <div class="tf-meta">
+            <span class="tf-tag">人物访谈</span>
+            <span>@铁粉空间yandex 官方</span><span>播放 22.3万</span><span>点赞 <b class="tf-like-count">9842</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+      <article class="tf-video-row" data-tf-tags="记录 教程">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23f0fdf4'/%3E%3Cpath d='M0 130 Q70 80 140 120 T320 100 V180 H0Z' fill='%2316a34a' opacity='.35'/%3E%3Crect x='40' y='38' width='140' height='12' rx='6' fill='%23161b26' opacity='.5'/%3E%3Crect x='40' y='62' width='200' height='9' rx='4' fill='%23161b26' opacity='.3'/%3E%3Crect x='40' y='82' width='160' height='9' rx='4' fill='%23161b26' opacity='.28'/%3E%3C/svg%3E" alt="视频《一个人的周末记录法》封面">
+        <div class="tf-video-body">
+          <h3>一个人的周末记录法：不摆拍，也能拍出生活感</h3>
+          <p>从光线判断到镜头选择，分享一套适合普通人的日常影像方法论。</p>
+          <div class="tf-meta">
+            <span class="tf-tag">日常记录</span>
+            <span>@周末放映室</span><span>播放 18.9万</span><span>点赞 <b class="tf-like-count">8765</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+      <article class="tf-video-row" data-tf-tags="测评 访谈">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Crect width='320' height='180' fill='%23f1f5f9'/%3E%3Crect x='24' y='34' width='130' height='76' rx='8' fill='%230ea5e9' opacity='.45'/%3E%3Crect x='166' y='34' width='130' height='76' rx='8' fill='%23e11d48' opacity='.4'/%3E%3Crect x='24' y='128' width='272' height='9' rx='4' fill='%23161b26' opacity='.4'/%3E%3Crect x='24' y='148' width='180' height='7' rx='3' fill='%23161b26' opacity='.22'/%3E%3C/svg%3E" alt="视频《年度相机横评幕后》封面">
+        <div class="tf-video-body">
+          <h3>年度相机横评幕后：我们是怎么测的</h3>
+          <p>公开测试流程、样张对比方法与评分权重，接受社区监督与质疑。</p>
+          <div class="tf-meta">
+            <span class="tf-tag tf-tag-ink">深度测评</span>
+            <span>@影像评测局</span><span>播放 16.4万</span><span>点赞 <b class="tf-like-count">7210</b></span>
+          </div>
+        </div>
+        <div class="tf-video-actions">
+          <button class="tf-act-btn tf-like-btn" type="button">♡ 点赞</button>
+          <button class="tf-act-btn tf-save-btn" type="button">☆ 收藏</button>
+          <button class="tf-act-btn tf-share-btn" type="button">↗ 分享</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- M4 专题/企划 -->
+<section class="tf-section tf-topics" id="tf-topics">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Special Projects</p>
+        <h2>专题企划 · 把长期主义拍成系列</h2>
+        <p class="tf-section-sub">每个专题由官方策划并持续跟拍，更新状态实时同步，欢迎铁粉在评论区留下想看的方向。</p>
+      </div>
+      <div class="tf-sh-side"><button class="tf-pill-link" id="tf-report-open" type="button">反馈 / 举报</button></div>
+    </div>
+    <div class="tf-topic-grid">
+      <article class="tf-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23161b26'/%3E%3Ccircle cx='320' cy='60' r='80' fill='%23e11d48' opacity='.25'/%3E%3Crect x='40' y='60' width='160' height='100' rx='10' fill='%23ffffff' opacity='.12'/%3E%3Crect x='60' y='80' width='120' height='9' rx='4' fill='%23ffffff' opacity='.5'/%3E%3Crect x='60' y='102' width='80' height='8' rx='4' fill='%23ffffff' opacity='.3'/%3E%3Crect x='220' y='150' width='140' height='10' rx='5' fill='%23e11d48' opacity='.8'/%3E%3C/svg%3E" alt="专题《城市清醒者》系列封面">
+        <div class="tf-topic-body">
+          <span class="tf-tag">更新中</span>
+          <h3>城市清醒者</h3>
+          <p>记录那些在城市苏醒之前就开始工作的人，一季六集，每集聚焦一种职业。</p>
+          <div class="tf-topic-status">已更新 4 / 6 集 · 每月 8 日上线</div>
+          <ul class="tf-topic-items">
+            <li>第一集：菜市场的第一盏灯</li>
+            <li>第二集：凌晨的公交调度室</li>
+            <li>第三集：清洁工的路线图</li>
+          </ul>
+          <a class="tf-topic-more" href="#tf-video">进入专题 →</a>
+        </div>
+      </article>
+      <article class="tf-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23fef3f2'/%3E%3Ccircle cx='100' cy='110' r='66' fill='%23e11d48' opacity='.25'/%3E%3Ccircle cx='300' cy='90' r='50' fill='%232563eb' opacity='.2'/%3E%3Crect x='140' y='80' width='120' height='12' rx='6' fill='%23161b26' opacity='.55'/%3E%3Crect x='140' y='106' width='90' height='9' rx='4' fill='%23161b26' opacity='.3'/%3E%3Crect x='90' y='176' width='220' height='9' rx='4' fill='%23e11d48' opacity='.6'/%3E%3C/svg%3E" alt="专题《一千零一次的练习》系列封面">
+        <div class="tf-topic-body">
+          <span class="tf-tag tf-tag-blue">报名中</span>
+          <h3>一千零一次的练习</h3>
+          <p>把枯燥的重复拍成可被看见的成长，邀请社区创作者上传自己的练习记录。</p>
+          <div class="tf-topic-status">投稿通道开放 · 截止 12 月 20 日</div>
+          <ul class="tf-topic-items">
+            <li>投稿要求：连续练习记录不少于 7 天</li>
+            <li>评选维度：真实感 / 持续性 / 影像完成度</li>
+            <li>优胜作品将获得官方首页推荐</li>
+          </ul>
+          <a class="tf-topic-more" href="#tf-faq">查看投稿说明 →</a>
+        </div>
+      </article>
+      <article class="tf-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23eff6ff'/%3E%3Crect x='40' y='40' width='140' height='140' rx='12' fill='%232563eb' opacity='.35'/%3E%3Crect x='200' y='40' width='160' height='64' rx='12' fill='%23e11d48' opacity='.3'/%3E%3Crect x='200' y='116' width='160' height='64' rx='12' fill='%23f59e0b' opacity='.35'/%3E%3Crect x='60' y='190' width='200' height='9' rx='4' fill='%23161b26' opacity='.4'/%3E%3C/svg%3E" alt="专题《手艺人档案》系列封面">
+        <div class="tf-topic-body">
+          <span class="tf-tag tf-tag-ink">已完结</span>
+          <h3>手艺人档案</h3>
+          <p>十二位手艺人，十二段关于耐心的故事。全集上线，支持高清完整回看。</p>
+          <div class="tf-topic-status">全 12 集已上线 · 累计播放 268 万</div>
+          <ul class="tf-topic-items">
+            <li>木作篇：一把椅子的七十二道工序</li>
+            <li>织物篇：老织机的最后一次转动</li>
+            <li>修复篇：让旧物继续被使用</li>
+          </ul>
+          <a class="tf-topic-more" href="#tf-video">观看全片 →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- M5 创作者矩阵：双列简介 -->
+<section class="tf-section" id="tf-authors">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Creators</p>
+        <h2>创作者矩阵 · 铁粉空间yandex的中坚力量</h2>
+        <p class="tf-section-sub">他们来自不同行业，却共享同一种对真实的执拗。点击“查看档案”了解完整创作轨迹。</p>
+      </div>
+    </div>
+    <div class="tf-author-grid" id="tf-author-grid">
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#e11d48,#7a1230);">晨</div>
+        <div class="tf-author-body">
+          <h3>清晨记录者</h3>
+          <div class="tf-author-field">日常记录 / 城市探索</div>
+          <p>三年坚持拍摄城市清晨，镜头沉稳克制。擅长在平凡场景中寻找情绪支点，代表专题《城市清醒者》累计播放超过 260 万。</p>
+          <div class="tf-author-stats"><span>作品 <b>86</b></span><span>粉丝 <b>24.3万</b></span><span>铁粉等级 <b>Lv.9</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="清晨记录者">查看档案 →</button>
+        </div>
+      </article>
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#2563eb,#1e3a8a);">陈</div>
+        <div class="tf-author-body">
+          <h3>剪辑师老陈</h3>
+          <div class="tf-author-field">教程干货 / 创作幕后</div>
+          <p>十年影视后期从业者，讲课不绕弯子。主张“先想清楚再打开软件”，课程被多所高校影视社团作为入门参考。</p>
+          <div class="tf-author-stats"><span>作品 <b>124</b></span><span>粉丝 <b>38.7万</b></span><span>铁粉等级 <b>Lv.10</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="剪辑师老陈">查看档案 →</button>
+        </div>
+      </article>
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#f59e0b,#b45309);">录</div>
+        <div class="tf-author-body">
+          <h3>录音棚日记</h3>
+          <div class="tf-author-field">深度测评 / 实用技巧</div>
+          <p>从发烧友到录音师，只做可复现的实测。所有测评设备自购，测试方法全部公开，接受社区质疑与复测。</p>
+          <div class="tf-author-stats"><span>作品 <b>67</b></span><span>粉丝 <b>17.2万</b></span><span>铁粉等级 <b>Lv.8</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="录音棚日记">查看档案 →</button>
+        </div>
+      </article>
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#16a34a,#14532d);">周</div>
+        <div class="tf-author-body">
+          <h3>周末放映室</h3>
+          <div class="tf-author-field">生活方式 / 治愈影像</div>
+          <p>两个人、一台相机、一间小院子。内容以慢节奏生活记录为主，不追赶热点，只记录季节变化与日常小事。</p>
+          <div class="tf-author-stats"><span>作品 <b>59</b></span><span>粉丝 <b>21.6万</b></span><span>铁粉等级 <b>Lv.9</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="周末放映室">查看档案 →</button>
+        </div>
+      </article>
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#9333ea,#581c87);">地</div>
+        <div class="tf-author-body">
+          <h3>在地文化小组</h3>
+          <div class="tf-author-field">在地文化 / 人物访谈</div>
+          <p>由三位地方史爱好者组成的团队，专注记录即将消失的手艺与方言。作品以访谈为主，保留大量原声素材。</p>
+          <div class="tf-author-stats"><span>作品 <b>44</b></span><span>粉丝 <b>12.8万</b></span><span>铁粉等级 <b>Lv.7</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="在地文化小组">查看档案 →</button>
+        </div>
+      </article>
+      <article class="tf-author-card">
+        <div class="tf-avatar" style="background:linear-gradient(135deg,#0ea5e9,#075985);">影</div>
+        <div class="tf-author-body">
+          <h3>影像评测局</h3>
+          <div class="tf-author-field">深度测评 / 科技前沿</div>
+          <p>坚持自费购机、不接厂商送测的独立评测团队。评分体系每年公开修订一次，历史样张长期可查。</p>
+          <div class="tf-author-stats"><span>作品 <b>93</b></span><span>粉丝 <b>29.5万</b></span><span>铁粉等级 <b>Lv.10</b></span></div>
+          <button class="tf-author-btn" type="button" data-tf-author="影像评测局">查看档案 →</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- M15 关键词深度解析（800字以上） -->
+<section class="tf-section tf-analysis" id="tf-analysis">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Deep Analysis</p>
+        <h2>关键词解析 · 为什么是“铁粉空间yandex”</h2>
+        <p class="tf-section-sub">一条品牌名背后，藏着我们对内容生态、创作者关系与长期价值的全部判断。</p>
+      </div>
+    </div>
+    <div class="tf-analysis-grid">
+      <div class="tf-analysis-block">
+        <h3><i>01</i>“铁粉”不是流量，而是一种关系结构</h3>
+        <p>
+          在大多数视频平台里，“粉丝”是被算法分配出来的数字：今天因为你的一条爆款关注你，明天因为另一条内容取关。
+          铁粉空间yandex 从创立之初就试图把这种脆弱关系改写。我们定义的“铁粉”，不是愿意为你打榜的人，
+          而是愿意为你的内容花完整三十分钟的人——他们记住了你的镜头语言，知道你为什么在某个转场停留两秒，
+          甚至会在评论里指出你上一集埋下的伏笔。<strong>这种关系无法被购买，只能被长期培养。</strong>
+        </p>
+        <p>
+          因此，平台在机制上做了三处取舍：其一，不向观众展示过分精细的实时播放量，避免“数据焦虑”反向影响创作；
+          其二，把收藏、完整观看、长评论的权重放在点赞之上；其三，创作者主页会展示“长期观看用户占比”，
+          让真正有铁粉的创作者被看见。这些设计笨拙、见效慢，但它们是内容生态的地基。
+        </p>
+      </div>
+      <div class="tf-analysis-block">
+        <h3><i>02</i>“空间”是一种留白的姿态</h3>
+        <p>
+          我们把产品命名为“空间”，而不是“频道”或“中心”，是刻意的。频道意味着单向广播，中心意味着资源集中，
+          而空间意味着<strong>可被进入、可被改变、可被共同使用</strong>。在铁粉空间yandex，观众不是被动的接收端：
+          专题的下一集拍什么，会在评论区征集；创作者的选题会由铁粉投票产生；每季度的“社区观察报告”由官方与用户共同撰写。
+        </p>
+        <p>
+          这种“空间感”也体现在视觉与交互上。我们刻意保留了大量留白，视频之间不过度堆叠推荐位，
+          页面滚动速度比主流平台慢一档。我们不希望用户的注意力被瞬间劫持，而是愿意让他们在一个页面里多停留、
+          多比较、多思考。商业上这或许不够激进，但从<strong>持续运营</strong>的角度看，它换来了更稳定的回访率与更长的用户生命周期。
+        </p>
+      </div>
+      <div class="tf-analysis-block">
+        <h3><i>03</i>“yandex”式的开放与检索野心</h3>
+        <p>
+          关键词中的 yandex 部分，在我们的品牌叙事里指向一种<strong>检索与开放的想象力</strong>：一个庞大的内容空间，
+          如果没有足够好的组织方式，就会变成噪音。铁粉空间yandex 为此投入了大量工程资源构建内容索引体系：
+          每条视频都有结构化的元数据，包括题材、拍摄地域、设备信息、创作方式、内容分级与版权状态；
+          用户可以通过多维标签交叉检索，找到“用自然光拍摄的、南方城市的、关于手艺人的、时长在十分钟以上的”内容。
+        </p>
+        <p>
+          这套索引不是为了炫技，而是为了延长内容的生命周期。一条三年前上传的教程，只要索引准确，
+          今天仍然可以被需要它的人搜到。我们统计过，平台约<strong>四成播放来自上线半年以上的内容</strong>，
+          这在一个追逐新热点的行业里并不常见。我们相信，真正的精品内容不应该被时间掩埋，而应该被系统地保存、被反复检索、被持续引用。
+        </p>
+      </div>
+      <div class="tf-analysis-block">
+        <h3><i>04</i>官方视角下的社区治理与品质承诺</h3>
+        <p>
+          作为一个对外发布信息的官方网站，铁粉空间yandex 把“值得信赖”拆解成可执行的动作：所有官方活动提前公示规则，
+          所有榜单公开计算方式，所有创作者认证公示审核标准，所有版权投诉在 72 小时内响应。
+          我们不承诺内容永远完美，但承诺每一次争议都有可查询的处理记录。
+        </p>
+        <p>
+          在垂直领域的深耕上，我们选择“少而深”的策略：不追求全品类覆盖，而是把影像记录、教程干货、深度测评、
+          人物访谈四条线做透。每一条线都配有专职内容策划，与创作者保持月度沟通，帮助他们在选题、剪辑、发布节奏上迭代。
+          我们也承担相应的<strong>社会责任</strong>：为地方文化记录类项目提供免费的存储与分发资源，
+          为新人创作者提供剪辑设备借用计划。这些投入不会立刻反映在数据上，但它们构成了品牌真正的护城河。
+        </p>
+      </div>
+      <div class="tf-analysis-note">
+        <b>一句话总结：</b>铁粉空间yandex 不是一个靠单条爆款驱动的平台，而是一个以“铁粉关系 + 空间留白 + 系统索引 + 官方治理”为四根柱子的内容生态。
+        我们希望十年后回看，这里仍然保存着一批值得被反复观看的真实影像。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- M8 用户评价：双列短评 + 引用摘录 -->
+<section class="tf-section tf-reviews" id="tf-reviews">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Community Voice</p>
+        <h2>用户口碑 · 铁粉们怎么说</h2>
+        <p class="tf-section-sub">来自真实账户的评价，未经修饰，保留原文与发布时间。</p>
+      </div>
+    </div>
+    <div class="tf-review-grid">
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#e11d48;">林</div>
+          <div class="tf-review-who"><b>林间有风</b><span>加入 2 年 · 观影 860 小时</span></div>
+          <div class="tf-stars">★★★★★</div>
+        </div>
+        <p>很少有一个平台让我愿意把三十分钟完整交给一条视频。这里的推荐不吵闹，看完一条会觉得心里踏实，而不是被推着看下一条。</p>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#2563eb;">阿</div>
+          <div class="tf-review-who"><b>阿南的相机</b><span>认证创作者 · 作品 38 部</span></div>
+          <div class="tf-stars">★★★★★</div>
+        </div>
+        <p>作为创作者，最直接的变化是评论区。以前是“沙发”“来了”，现在是真的在讨论镜头和剪辑。这种反馈会让你想继续拍下去。</p>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#16a34a;">小</div>
+          <div class="tf-review-who"><b>小满不吃香菜</b><span>加入 1 年 · 收藏 214 条</span></div>
+          <div class="tf-stars">★★★★☆</div>
+        </div>
+        <p>画面清晰度是真的好，老片子的修复版也能看。扣一星是因为希望移动端能加一个离线缓存，通勤路上想反复看教程。</p>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#f59e0b;">老</div>
+          <div class="tf-review-who"><b>老周修旧物</b><span>加入 3 年 · 铁粉等级 Lv.9</span></div>
+          <div class="tf-stars">★★★★★</div>
+        </div>
+        <p>最喜欢《手艺人档案》。这类内容在其他地方很难被推荐，在这里却能完整看完十二集。希望官方继续做这种不喧哗的专题。</p>
+      </article>
+      <article class="tf-review-quote">
+        <p>我是从一条讲凌晨菜市场的视频找过来的。看完之后把整个专题都补了，还专门去了一趟片子里出现的那个市场。一个平台愿意花力气记录这些，说明它真的在乎内容，而不只是流量。</p>
+        <cite>—— 用户「南方以南」，发布于 2026 年 11 月 12 日</cite>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#9333ea;">声</div>
+          <div class="tf-review-who"><b>声音练习生</b><span>加入 8 个月 · 投稿 12 次</span></div>
+          <div class="tf-stars">★★★★★</div>
+        </div>
+        <p>投稿审核会给出具体意见，不是一句“未通过”。我第三次投稿的修改建议写了整整两页，这种认真程度很少见。</p>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#0ea5e9;">一</div>
+          <div class="tf-review-who"><b>一页纸电影</b><span>加入 1.5 年 · 观影 420 小时</span></div>
+          <div class="tf-stars">★★★★☆</div>
+        </div>
+        <p>检索功能是真的好用，能按拍摄方式筛选，找素材参考特别方便。缺点是专题更新有点慢，等一集要一个月。</p>
+      </article>
+      <article class="tf-review-card">
+        <div class="tf-review-head">
+          <div class="tf-avatar-sm" style="background:#7a1230;">铁</div>
+          <div class="tf-review-who"><b>铁粉不铁</b><span>加入 6 个月 · 点赞 1.2 万次</span></div>
+          <div class="tf-stars">★★★★★</div>
+        </div>
+        <p>官方回复评论这件事，我以为只是宣传。结果真的在评论区被回复过两次，还把我提的选题做成了专题第二集。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- M10 企业动态 -->
+<section class="tf-section" id="tf-news">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Company Updates</p>
+        <h2>企业动态 · 官方发布与产品更新</h2>
+        <p class="tf-section-sub">所有对外信息以本页为准，历史记录不做删除，可逐条回溯。</p>
+      </div>
+    </div>
+    <div class="tf-news-list">
+      <article class="tf-news-card">
+        <span class="tf-news-date">2026 / 11 / 22</span>
+        <h3>冬季创作挑战赛开放报名</h3>
+        <p>面向全体认证创作者与新人用户，主题为“我的一天”，投稿截止 12 月 20 日，优胜作品获得官方首页推荐与设备支持。</p>
+      </article>
+      <article class="tf-news-card">
+        <span class="tf-news-date">2026 / 11 / 20</span>
+        <h3>高清创作专区正式上线</h3>
+        <p>新增 4K 原片上传通道与码率自适应播放，创作者可在后台上传原始文件，观众端按网络情况自动选择清晰度。</p>
+      </article>
+      <article class="tf-news-card">
+        <span class="tf-news-date">2026 / 11 / 18</span>
+        <h3>品牌故事纪录片《真实的回响》首发</h3>
+        <p>由官方影像团队跟拍三个月完成，讲述三位创作者的日常与选择，全长 42 分钟，支持完整回看与字幕下载。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- M12 FAQ -->
+<section class="tf-section tf-faq" id="tf-faq">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Help Center</p>
+        <h2>常见问题 · 关于铁粉空间yandex</h2>
+        <p class="tf-section-sub">以下为社区高频提问，若未覆盖你的问题，可通过页面底部的反馈入口联系官方。</p>
+      </div>
+    </div>
+    <div class="tf-faq-grid">
+      <details>
+        <summary>铁粉空间yandex 是官方平台吗？</summary>
+        <p>是。本页由官方团队维护，发布的品牌故事、企业动态与产品更新均为一手信息，其他渠道信息请以本页为准。</p>
+      </details>
+      <details>
+        <summary>如何成为认证创作者？</summary>
+        <p>需满足三个条件：完成实名认证、至少有 3 部原创作品通过审核、近半年无版权纠纷记录。提交申请后 7 个工作日内给出结果。</p>
+      </details>
+      <details>
+        <summary>投稿的视频会被商用吗？</summary>
+        <p>不会。创作者保留作品著作权，平台仅在授权范围内提供在线播放与推荐服务。任何商业用途需单独签署授权协议。</p>
+      </details>
+      <details>
+        <summary>支持哪些分辨率的视频上传？</summary>
+        <p>支持 720P 至 4K，单文件上限 8GB。建议上传原始素材而非二次压缩文件，以获得更好的播放画质。</p>
+      </details>
+      <details>
+        <summary>评论被误删了怎么处理？</summary>
+        <p>可在反馈入口提交评论内容与大致发布时间，官方会在 72 小时内复核。若确认为误判，将恢复评论并说明原因。</p>
+      </details>
+      <details>
+        <summary>专题更新频率是怎样的？</summary>
+        <p>连载类专题通常每月更新一集，完结类专题一次性上线。具体节奏会在专题页标注，延期会提前公告。</p>
+      </details>
+      <details>
+        <summary>平台如何处理版权投诉？</summary>
+        <p>收到有效投诉后，将在 72 小时内完成初步核实，涉事内容先行下架，双方举证期满后给出处理结论并公示。</p>
+      </details>
+      <details>
+        <summary>是否有新人扶持计划？</summary>
+        <p>有。新人扶持计划提供剪辑设备借用、选题辅导与首月流量倾斜，每季度开放 30 个名额，详情见官方公告。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- M11 合作品牌 -->
+<section class="tf-section tf-partners" id="tf-partners">
+  <div class="tf-shell">
+    <div class="tf-section-head">
+      <div class="tf-sh-main">
+        <p class="tf-kicker">Partners</p>
+        <h2>合作品牌 · 一起把内容做扎实</h2>
+        <p class="tf-section-sub">我们只与尊重创作者权益、认同长期主义的伙伴合作，所有合作内容均明确标注。</p>
+      </div>
+    </div>
+    <div class="tf-partner-grid">
+      <div class="tf-partner">光影器材研究所<span>设备支持伙伴</span></div>
+      <div class="tf-partner">城市文化基金会<span>地方记录支持</span></div>
+      <div class="tf-partner">声学实验室<span>音频技术合作</span></div>
+      <div class="tf-partner">独立书店联盟<span>内容联合企划</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="tf-footer">
+  <div class="tf-shell">
+    <div class="tf-footer-grid">
+      <div>
+        <div class="tf-footer-brand">
+          <span class="tf-brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#ffffff"/></svg>
+          </span>
+          <b>铁粉空间yandex</b>
+        </div>
+        <p>铁粉空间yandex 官方网站。以铁粉关系为核心的高品质视频社区，坚持原创、正版、高清，持续运营垂直领域内容生态。</p>
+        <p>官方发布 · 企业动态 · 品牌故事 · 持续运营中</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <a href="#tf-focus">焦点内容</a>
+        <a href="#tf-video">热门视频</a>
+        <a href="#tf-topics">专题企划</a>
+        <a href="#tf-authors">创作者矩阵</a>
+      </div>
+      <div>
+        <h4>关于官方</h4>
+        <a href="#tf-about">品牌简介</a>
+        <a href="#tf-analysis">关键词解析</a>
+        <a href="#tf-news">企业动态</a>
+        <a href="#tf-faq">常见问题</a>
+      </div>
+      <div>
+        <h4>参与社区</h4>
+        <a href="#tf-topics">投稿入口</a>
+        <a href="#tf-reviews">用户口碑</a>
+        <a href="#tf-partners">合作品牌</a>
+        <a href="#tf-hero">回到首屏</a>
+      </div>
+    </div>
+    <div class="tf-footer-bottom">
+      <span>© 2026 铁粉空间yandex 官方网站 · 版权所有</span>
+      <span>备案号：示例备案 0000000 号 · 内容由官方团队持续运营</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 交互元素 -->
+<div class="tf-toast" id="tf-toast" role="status" aria-live="polite"></div>
+
+<div class="tf-modal-mask" id="tf-modal-mask">
+  <div class="tf-modal" id="tf-modal" role="dialog" aria-modal="true" aria-labelledby="tf-modal-title">
+    <h3 id="tf-modal-title">提示</h3>
+    <p id="tf-modal-desc"></p>
+    <div id="tf-modal-body"></div>
+    <div class="tf-modal-actions">
+      <button class="tf-btn tf-btn-ghost" id="tf-modal-cancel" type="button">关闭</button>
+      <button class="tf-btn tf-btn-primary" id="tf-modal-confirm" type="button">我知道了</button>
+    </div>
+  </div>
+</div>
+
+<button class="tf-top-btn" id="tf-top-btn" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById('tf-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('tf-show');
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('tf-show'); }, 2200);
+  }
+
+  /* ---------- mobile nav ---------- */
+  var navToggle = document.getElementById('tf-nav-toggle');
+  var nav = document.getElementById('tf-nav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('tf-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('tf-open');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- announce close ---------- */
+  var annClose = document.getElementById('tf-announce-close');
+  if(annClose){
+    annClose.addEventListener('click', function(){
+      var bar = document.getElementById('tf-announce');
+      if(bar){ bar.style.display = 'none'; }
+    });
+  }
+
+  /* ---------- search filter ---------- */
+  var searchForm = document.getElementById('tf-search-form');
+  var searchInput = document.getElementById('tf-search-input');
+  var searchFeedback = document.getElementById('tf-search-feedback');
+  function clearHighlights(root){
+    var marks = root.querySelectorAll('.tf-highlight');
+    for(var i=0;i<marks.length;i++){
+      var m = marks[i];
+      var parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    }
+  }
+  function highlight(node, term){
+    if(node.nodeType === 3){
+      var text = node.textContent;
+      var idx = text.toLowerCase().indexOf(term.toLowerCase());
+      if(idx > -1){
+        var span = document.createElement('span');
+        span.className = 'tf-highlight';
+        span.textContent = text.substr(idx, term.length);
+        var after = document.createTextNode(text.substr(idx + term.length));
+        var before = document.createTextNode(text.substr(0, idx));
+        var parent = node.parentNode;
+        parent.replaceChild(after, node);
+        parent.insertBefore(span, after);
+        parent.insertBefore(before, span);
+      }
+    } else if(node.nodeType === 1 && node.childNodes && node.className !== 'tf-highlight'){
+      for(var i=node.childNodes.length-1;i>=0;i--){
+        highlight(node.childNodes[i], term);
+      }
+    }
+  }
+  function runSearch(term){
+    if(!searchFeedback) return;
+    var q = (term || '').trim();
+    clearHighlights(document.body);
+    if(!q){
+      searchFeedback.classList.remove('tf-show');
+      searchFeedback.textContent = '';
+      var hidden = document.querySelectorAll('.tf-hidden-by-search');
+      for(var h=0;h<hidden.length;h++){ hidden[h].classList.remove('tf-hidden-by-search'); }
+      return;
+    }
+    var list = document.getElementById('tf-video-list');
+    var rows = list ? list.querySelectorAll('.tf-video-row') : [];
+    var matchCount = 0;
+    var firstMatch = null;
+    for(var i=0;i<rows.length;i++){
+      var row = rows[i];
+      var txt = row.textContent.toLowerCase();
+      if(txt.indexOf(q.toLowerCase()) > -1){
+        row.classList.remove('tf-hidden-by-search');
+        matchCount++;
+        if(!firstMatch) firstMatch = row;
+      } else {
+        row.classList.add('tf-hidden-by-search');
+      }
+    }
+    var wholePageMatch = document.body.textContent.toLowerCase().indexOf(q.toLowerCase()) > -1;
+    searchFeedback.classList.add('tf-show');
+    if(matchCount > 0){
+      searchFeedback.textContent = '在热门视频中找到 ' + matchCount + ' 条与“' + q + '”相关的内容，已为你筛出。';
+    } else if(wholePageMatch){
+      searchFeedback.textContent = '视频列表暂无“' + q + '”的匹配条目，但页面其他板块提到了相关内容，可继续浏览。';
+    } else {
+      searchFeedback.textContent = '没有找到与“' + q + '”直接相关的内容，试试“剪辑”“城市”“测评”等关键词。';
+    }
+    if(firstMatch){
+      setTimeout(function(){
+        var rect = firstMatch.getBoundingClientRect();
+        var top = rect.top + window.pageYOffset - 150;
+        window.scrollTo({top: top, behavior:'smooth'});
+      }, 260);
+    }
+  }
+  if(searchForm){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      runSearch(searchInput ? searchInput.value : '');
+    });
+  }
+  if(searchInput){
+    var inputTimer = null;
+    searchInput.addEventListener('input', function(){
+      if(inputTimer) clearTimeout(inputTimer);
+      var v = searchInput.value;
+      if(v.trim() === ''){
+        runSearch('');
+        return;
+      }
+      inputTimer = setTimeout(function(){ runSearch(v); }, 420);
+    });
+  }
+
+  /* ---------- tags filter ---------- */
+  var chips = document.querySelectorAll('#tf-video-toolbar .tf-chip');
+  var filterRows = document.querySelectorAll('#tf-video-list .tf-video-row');
+  for(var c=0;c<chips.length;c++){
+    chips[c].addEventListener('click', function(){
+      for(var k=0;k<chips.length;k++){ chips[k].classList.remove('tf-active'); }
+      this.classList.add('tf-active');
+      var key = this.getAttribute('data-tf-filter');
+      for(var r=0;r<filterRows.length;r++){
+        var tags = filterRows[r].getAttribute('data-tf-tags') || '';
+        if(key === 'all' || tags.indexOf(key) > -1){
+          filterRows[r].classList.remove('tf-hidden-by-search');
+        } else {
+          filterRows[r].classList.add('tf-hidden-by-search');
+        }
+      }
+      var shown = document.querySelectorAll('#tf-video-list .tf-video-row:not(.tf-hidden-by-search)').length;
+      showToast('已筛选出 ' + shown + ' 条内容');
+    });
+  }
+
+  /* ---------- like / save ---------- */
+  var likeBtns = document.querySelectorAll('.tf-like-btn');
+  for(var i=0;i<likeBtns.length;i++){
+    likeBtns[i].addEventListener('click', function(){
+      var btn = this;
+      var row = btn.closest('.tf-video-row');
+      var counter = row ? row.querySelector('.tf-like-count') : null;
+      var liked = btn.classList.toggle('tf-liked');
+      if(liked){
+        btn.textContent = '♥ 已赞';
+        if(counter){
+          var raw = counter.textContent.trim();
+          if(raw.indexOf('万') > -1){
+            var num = parseFloat(raw) + 0.1;
+            counter.textContent = num.toFixed(1) + '万';
+          } else {
+            counter.textContent = (parseInt(raw,10) + 1).toString();
+          }
+        }
+        showToast('已点赞，谢谢你的认可');
+      } else {
+        btn.textContent = '♡ 点赞';
+        if(counter){
+          var raw2 = counter.textContent.trim();
+          if(raw2.indexOf('万') > -1){
+            var num2 = Math.max(0, parseFloat(raw2) - 0.1);
+            counter.textContent = num2.toFixed(1) + '万';
+          } else {
+            counter.textContent = Math.max(0, parseInt(raw2,10) - 1).toString();
+          }
+        }
+        showToast('已取消点赞');
+      }
+    });
+  }
+  var saveBtns = document.querySelectorAll('.tf-save-btn');
+  for(var s=0;s<saveBtns.length;s++){
+    saveBtns[s].addEventListener('click', function(){
+      var saved = this.classList.toggle('tf-saved');
+      this.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      showToast(saved ? '已加入收藏，可在个人主页查看' : '已取消收藏');
+    });
+  }
+
+  /* ---------- modal helper ---------- */
+  var mask = document.getElementById('tf-modal-mask');
+  var modalTitle = document.getElementById('tf-modal-title');
+  var modalDesc = document.getElementById('tf-modal-desc');
+  var modalBody = document.getElementById('tf-modal-body');
+  var modalCancel = document.getElementById('tf-modal-cancel');
+  var modalConfirm = document.getElementById('tf-modal-confirm');
+  var lastFocus = null;
+  function openModal(title, desc, bodyHtml, confirmText){
+    if(!mask) return;
+    lastFocus = document.activeElement;
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc || '';
+    modalBody.innerHTML = bodyHtml || '';
+    modalConfirm.textContent = confirmText || '我知道了';
+    mask.classList.add('tf-show');
+    modalConfirm.focus();
+  }
+  function closeModal(){
+    if(!mask) return;
+    mask.classList.remove('tf-show');
+    if(lastFocus && lastFocus.focus){ lastFocus.focus(); }
+  }
+  if(modalCancel){ modalCancel.addEventListener('click', closeModal); }
+  if(modalConfirm){ modalConfirm.addEventListener('click', closeModal); }
+  if(mask){
+    mask.addEventListener('click', function(e){
+      if(e.target === mask){ closeModal(); }
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && mask && mask.classList.contains('tf-show')){ closeModal(); }
+  });
+
+  /* ---------- share ---------- */
+  var shareBtns = document.querySelectorAll('.tf-share-btn');
+  for(var sh=0;sh<shareBtns.length;sh++){
+    shareBtns[sh].addEventListener('click', function(){
+      var row = this.closest('.tf-video-row');
+      var title = row ? row.querySelector('h3').textContent : '铁粉空间yandex';
+      openModal('分享这条内容', '选择你常用的平台，把好内容推荐给同好。', 
+        '<div style="display:flex;gap:10px;flex-wrap:wrap;">' +
+        '<button class="tf-btn tf-btn-ghost" data-tf-share="wechat" type="button">微信</button>' +
+        '<button class="tf-btn tf-btn-ghost" data-tf-share="weibo" type="button">微博</button>' +
+        '<button class="tf-btn tf-btn-ghost" data-tf-share="qq" type="button">QQ</button>' +
+        '<button class="tf-btn tf-btn-ghost" data-tf-share="copy" type="button">复制标题</button>' +
+        '</div><p style="margin-top:14px;font-size:12.5px;">即将分享：' + title + '</p>',
+        '关闭');
+    });
+  }
+  document.addEventListener('click', function(e){
+    var target = e.target;
+    if(target && target.getAttribute && target.getAttribute('data-tf-share')){
+      var type = target.getAttribute('data-tf-share');
+      if(type === 'copy'){
+        var content = document.querySelector('#tf-modal-body p');
+        var text = content ? content.textContent.replace('即将分享：','') : '';
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(text).then(function(){ showToast('标题已复制'); }).catch(function(){ showToast('复制失败，请手动选择'); });
+        } else {
+          showToast('当前环境不支持自动复制');
+        }
+      } else {
+        var map = {wechat:'微信', weibo:'微博', qq:'QQ'};
+        showToast('已生成' + map[type] + '分享提示');
+      }
+      closeModal();
+    }
+  });
+
+  /* ---------- copy page link ---------- */
+  var copyBtn = document.getElementById('tf-copy-btn');
+  if(copyBtn){
+    copyBtn.addEventListener('click', function(){
+      var linkText = '铁粉空间yandex 官方网站';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(linkText).then(function(){
+          showToast('品牌名称已复制，可粘贴分享');
+        }).catch(function(){
+          showToast('复制失败，请手动复制');
+        });
+      } else {
+        showToast('当前浏览器不支持自动复制');
+      }
+    });
+  }
+
+  /* ---------- submit modal ---------- */
+  var submitOpen = document.getElementById('tf-submit-open');
+  if(submitOpen){
+    submitOpen.addEventListener('click', function(){
+      openModal('投稿入口', '请简要填写你的创作方向，官方会在 7 个工作日内与你联系。',
+        '<div style="display:flex;flex-direction:column;gap:10px;">' +
+        '<input type="text" placeholder="你的昵称" style="padding:10px 14px;border:1px solid #e3e6ef;border-radius:10px;font-size:14px;outline:none;">' +
+        '<input type="text" placeholder="创作方向，例如：城市记录 / 教程" style="padding:10px 14px;border:1px solid #e3e6ef;border-radius:10px;font-size:14px;outline:none;">' +
+        '<textarea placeholder="简单描述你的作品与投稿想法" rows="3" style="padding:10px 14px;border:1px solid #e3e6ef;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></textarea>' +
+        '</div>',
+        '提交意向');
+    });
+  }
+
+  /* ---------- report modal ---------- */
+  var reportOpen = document.getElementById('tf-report-open');
+  if(reportOpen){
+    reportOpen.addEventListener('click', function(){
+      openModal('反馈 / 举报', '请描述你遇到的问题，官方会在 72 小时内复核。',
+        '<textarea placeholder="请填写具体内容、出现位置与时间" rows="4" style="width:100%;padding:10px 14px;border:1px solid #e3e6ef;border-radius:10px;font-size:14px;outline:none;font-family:inherit;"></textarea>',
+        '提交反馈');
+    });
+  }
+
+  /* ---------- author modal ---------- */
+  var authorBtns = document.querySelectorAll('[data-tf-author]');
+  var authorInfo = {
+    '清晨记录者': {field:'日常记录 / 城市探索', works:'86 部', fans:'24.3 万', desc:'三年坚持拍摄城市清晨，镜头沉稳克制。擅长在平凡场景中寻找情绪支点，代表专题《城市清醒者》累计播放超过 260 万。2025 年获年度真实记录奖。'},
+    '剪辑师老陈': {field:'教程干货 / 创作幕后', works:'124 部', fans:'38.7 万', desc:'十年影视后期从业者，讲课不绕弯子。主张“先想清楚再打开软件”，课程被多所高校影视社团作为入门参考。每周三固定更新。'},
+    '录音棚日记': {field:'深度测评 / 实用技巧', works:'67 部', fans:'17.2 万', desc:'从发烧友到录音师，只做可复现的实测。所有测评设备自购，测试方法全部公开，接受社区质疑与复测。擅长用通俗语言解释声学原理。'},
+    '周末放映室': {field:'生活方式 / 治愈影像', works:'59 部', fans:'21.6 万', desc:'两个人、一台相机、一间小院子。内容以慢节奏生活记录为主，不追赶热点，只记录季节变化与日常小事。被用户称为“周末的解压按钮”。'},
+    '在地文化小组': {field:'在地文化 / 人物访谈', works:'44 部', fans:'12.8 万', desc:'由三位地方史爱好者组成的团队，专注记录即将消失的手艺与方言。作品以访谈为主，保留大量原声素材，提供完整字幕与方言注释。'},
+    '影像评测局': {field:'深度测评 / 科技前沿', works:'93 部', fans:'29.5 万', desc:'坚持自费购机、不接厂商送测的独立评测团队。评分体系每年公开修订一次，历史样张长期可查。所有测试数据向社区开放下载。'}
+  };
+  for(var a=0;a<authorBtns.length;a++){
+    authorBtns[a].addEventListener('click', function(){
+      var name = this.getAttribute('data-tf-author');
+      var info = authorInfo[name];
+      if(!info) return;
+      openModal(name + ' · 创作者档案', info.field,
+        '<div style="font-size:13.5px;color:#2a3242;line-height:1.8;">' +
+        '<p style="margin:0 0 10px;">' + info.desc + '</p>' +
+        '<p style="margin:0;color:#68738a;font-size:12.5px;">作品数：' + info.works + ' · 粉丝数：' + info.fans + ' · 已通过官方认证</p>' +
+        '</div>',
+        '关注创作者');
+    });
+  }
+
+  /* ---------- hero play ---------- */
+  var heroPlay = document.querySelector('.tf-hero-play');
+  if(heroPlay){
+    heroPlay.addEventListener('click', function(){
+      showToast('品牌形象片《真实的回响》即将播放');
+    });
+    heroPlay.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        showToast('品牌形象片《真实的回响》即将播放');
+      }
+    });
+  }
+
+  /* ---------- back to top ---------- */
+  var topBtn = document.getElementById('tf-top-btn');
+  function onScroll(){
+    if(!topBtn) return;
+    if(window.pageYOffset > 520){
+      topBtn.classList.add('tf-show');
+    } else {
+      topBtn.classList.remove('tf-show');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  if(topBtn){
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+  onScroll();
+
+})();
+</script>
+</body>
+            </html>
